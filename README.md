@@ -1,38 +1,37 @@
-# ResumeToPortfolio
-# 🚀 AI Portfolio Website Generator (CrewAI + Google Colab)
+# 🚀 AI Portfolio Generator & Auto-Deployer (Vercel)
 
-This project is an intelligent agent-based tool that generates a complete personal portfolio website using your uploaded **resume (PDF)** and **profile photo (JPG/PNG)**. 
+This project allows you to **upload a resume PDF and a profile image**, then:
 
-## 🔧 Features
-
-- 📄 Upload your **resume PDF**
-- 🖼️ Upload your **profile picture**
-- 🤖 CrewAI agents:
-  - **Resume Extractor**: Extracts your professional details from the PDF
-  - **Portfolio Website Generator**: Creates a modern HTML/CSS website using the data
-- 📦 Outputs:
-  - `index.html`
-  - `style.css`
-  - Your uploaded image
-  - ✅ Downloadable as `portfolio.zip`
+1. 🧠 Uses an **AI agent** to generate a portfolio website (`index.html` and `style.css`)
+2. ⚙️ Converts it into a deployable Vite-compatible static site
+3. 🌍 Deploys it directly to **Vercel** using its REST API — *no GitHub or CLI required*
 
 ---
 
-## 📂 How It Works
+## 📦 What This Project Does
 
-1. **Resume Upload**: The user uploads a resume in PDF format.
-2. **Photo Upload**: The user uploads a JPG or PNG photo.
-3. **CrewAI Pipeline**:
-   - `Resume Extractor`: Parses structured details from the resume
-   - `Website Generator`: Uses those details to generate HTML/CSS
-4. **Packaging**: The site files and image are zipped together.
-5. **Download**: User can download the `portfolio.zip` instantly.
+### ✅ Agent Responsibilities
+
+- Extract structured data from your resume
+- Generate a responsive, styled HTML portfolio using your uploaded photo
+- Output: `index.html`, `style.css`
+
+### 🔧 Manual Functions (Python)
+
+- Handle file uploads via Google Colab
+- Convert output into a Vite-compatible folder
+- Package and send files to Vercel via their REST API
+- Return the final **public live link** to your portfolio
 
 ---
 
-## 🧪 Setup (in Google Colab)
+## 🧠 Tech Used
 
-1. Install dependencies (if needed):
+- Python (Google Colab)
+- [CrewAI](https://github.com/joaomdmoura/crewai)
+- Google Generative AI (Gemini)
+- Vercel API (no CLI)
+- Vite-compatible static file structure
 
-```bash
-!pip install crewai PyPDF2
+---
+
